@@ -3,9 +3,15 @@ function getTotalBooksCount(books) {
   return books.length;
 }
 
+//Returns the number of accounts in the array
 function getTotalAccountsCount(accounts) {
-  return accounts.length;
+  const list = accounts.reduce((account) => {
+  account = accounts.map((account) => account);
+  return account.length;
+  }, 0);
+  return list; 
 }
+
 
 //It returns a number that represents the number of books that are currently checked out of the library. 
 //This number can be found by looking at the first transaction object in the `borrows` array of each book. 
